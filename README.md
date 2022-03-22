@@ -11,6 +11,9 @@ Result:
 App crashes with the following exceptions
 
 
+`App.tsx` file also has a `BlurView` but the app wont crash. `AppCrash.tsx` will crash
+
+
 ```
 2022-03-22 16:30:16.893 6330-6330/? E/AndroidRuntime: FATAL EXCEPTION: main
     Process: com.rnscreensblurviewcrash, PID: 6330
