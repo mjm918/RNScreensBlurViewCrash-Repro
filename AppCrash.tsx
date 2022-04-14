@@ -12,17 +12,27 @@ function First({navigation}) {
     }, 2000);
   }, []);
   return (
-    <View style={{flex: 1}}>
-      <Text>111</Text>
+    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <BlurView
+        blurType={'dark'}
+        style={{height: 100, width: 100}}
+        blurAmount={15}>
+        <Text onPress={() => navigation.navigate('Second')}>CLICK HERE TO CRASH</Text>
+      </BlurView>
     </View>
   );
 }
 function Second({navigation}) {
   return (
     <View style={{flex: 1}}>
-      <BlurView blurType={"dark"} blurAmount={15}>
-        <Text>222</Text>
-      </BlurView>
+      {['222', '333', '444', '555', '666'].map(item => (
+        <BlurView
+          blurType={'dark'}
+          style={{height: 100, width: 100}}
+          blurAmount={15}>
+          <Text>{item}</Text>
+        </BlurView>
+      ))}
     </View>
   );
 }
